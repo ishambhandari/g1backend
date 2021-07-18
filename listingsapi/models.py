@@ -6,7 +6,7 @@ from datetime import datetime
 class Employees(models.Model):
     id = models.AutoField(primary_key = True)
     name = models.CharField(max_length= 100)
-    phone = models.PositiveIntegerField()
+    phone = models.PositiveBigIntegerField()
     email = models.EmailField(max_length=254, unique=True)
     designation = models.CharField(max_length=100)
     faculty = models.CharField(max_length=100)
@@ -22,7 +22,7 @@ class Employees(models.Model):
 class Customers(models.Model):
     id = models.AutoField(primary_key= True)
     name = models.CharField(max_length =100)
-    phone = models.PositiveIntegerField()
+    phone = models.PositiveBigIntegerField()
     location = models.CharField(max_length = 200) 
 
     def __str__(self):
